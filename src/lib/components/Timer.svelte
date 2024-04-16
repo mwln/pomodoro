@@ -30,12 +30,14 @@
 	<p class={timerClass}>
 		{remainingMinutes}:{remainingSeconds}
 	</p>
-	{#if $active}
-		<button on:click={timer.stop}>Stop</button>
-	{:else}
-		<button on:click={timer.start}>Start</button>
-	{/if}
-	<button on:click={timer.reset}>Reset</button>
+	<div class="controls">
+		{#if $active}
+			<button on:click={timer.stop}>Stop</button>
+		{:else}
+			<button on:click={timer.start}>Start</button>
+		{/if}
+		<button on:click={timer.reset}>Reset</button>
+	</div>
 </div>
 
 <style>
@@ -44,5 +46,11 @@
 		margin: 0;
 		font-size: 4rem;
 		font-weight: bold;
+	}
+
+	.controls {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
 	}
 </style>
