@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 250,
         "resizable": true,
         "title": "pomodoro",
-        "width": 800
+        "width": 700
       }
     ]
   }
