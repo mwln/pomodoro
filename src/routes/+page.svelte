@@ -64,8 +64,39 @@
 </div>
 
 <style>
-	:root {
+	:global(:root) {
 		font-size: 22px;
+		--light: #f8fafc; /* slate-50 */
+		--dark: #020617; /* slate-950 */
+		--light-border: #cbd5e1; /* slate-300 */
+		--dark-border: #1e293b; /* slate-800 */
+	}
+
+	:global(body, input, button) {
+		color: var(--dark);
+		background-color: var(--light);
+		border-color: var(--light-border);
+	}
+
+	:global(input, button) {
+		border-style: solid;
+		border-radius: 2px;
+	}
+
+	:global(input) {
+		padding: 0.2rem;
+	}
+
+	:global(input[type='number']) {
+		apperance: textfield;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(body, input, button) {
+			color: var(--light);
+			background-color: var(--dark);
+			border-color: var(--dark-border);
+		}
 	}
 
 	:global(html),
