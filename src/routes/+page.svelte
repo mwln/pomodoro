@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Timer from '$lib/components/Timer.svelte';
 	import { active } from '$lib/stores/timer';
 	import { onMount } from 'svelte';
@@ -88,7 +88,7 @@
 	}
 
 	:global(input[type='number']) {
-		apperance: textfield;
+		appearance: textfield;
 	}
 
 	@media (prefers-color-scheme: dark) {
